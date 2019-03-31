@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Анастасия](https://up.htmlacademy.ru/adaptive/16/user/958277).
-* Наставник: `Неизвестно`.
+* Студент: [Анастасия Горбенко](https://up.htmlacademy.ru/adaptive/16/user/958277).
+* Наставник: [Артём Рудов](https://htmlacademy.ru/profile/artrudov).
 
 ---
 
