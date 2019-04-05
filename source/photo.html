@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Pink. Фотографии пользователей</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-navigation">
+        <div class="main-navigation__header">
+          <a class="main-navigation__logo" href="index.html">
+            <img class="main-navigation__logo-image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+          </a>
+          <span class="main-navigation__button">Открыть меню</span>
+        </div>
+        <ul class="site-list main-navigation__list">
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link">Фотографии</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="page-header__title">Фотографии пользователей</h1>
+    </header>
+
+    <main class="page-main">
+      <p class="page-main__lead">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+
+      <section class="user-photos">
+        <ul class="user-photos__list">
+          <li class="photo user-photos__item">
+            <a class="photo__link" href="img/">
+              <img class="photo__preview" src="img/" width="" height="" alt="Фото пользователя Анна">
+              <p class="photo__note">Панорама дня</p>
+            </a>
+            <div class="photo__about">
+              <p class="photo__author">Анна <span class="photos__time">(5 минут назад)</span></p>
+              <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="photo__like">Нравится: 215</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Левон">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Левон <span class="photos__time">(5 часов назад)</span></p>
+              <p class="photos__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="photos__like">Нравится: 356</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Антон">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Антон <span class="photos__time">(12 часов назад)</span></p>
+              <p class="photos__comment">Соседи будут рады!</p>
+              <p class="photos__like">Нравится: 666</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Борис">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Борис <span class="photos__time">(20 часов назад)</span></p>
+              <p class="photos__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="photos__like">Нравится: 215</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Сергей">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Сергей <span class="photos__time">(25 часов назад)</span></p>
+              <p class="photos__comment">Самая кубанская в мире!</p>
+              <p class="photos__like">Нравится: 4</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Максим">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Максим <span class="photos__time">(40 часов назад)</span></p>
+              <p class="photos__comment">Где снег-то?</p>
+              <p class="photos__like">Нравится: 150</p>
+            </div>
+          </li>
+          <li class="photos__item user-photos__item">
+            <a class="photos__link" href="img/">
+              <img class="photos__preview" src="img/" width="" height="" alt="Фото пользователя Надежда">
+            </a>
+            <div class="photos__about">
+              <p class="photos__author">Надежда <span class="photos__time">(45 часов назад)</span></p>
+              <p class="photos__comment">Всем GM и взаимные лайки!</p>
+              <p class="photos__like">Нравится: 2560</p>
+            </div>
+          </li>
+        </ul>
+        <p class="user-photos__lead">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      </section>
+
+      <section class="editor">
+        <form class="editor__form" method="post" action="https://echo.htmlacademy.ru">
+          <img class="editor__photo" src="img/" width="" height="" alt="Пример фото">
+          <ul class="editor__filters">
+            <li class="editor__filter-item editor__filter-item--crop">Обрезать</li>
+            <li class="editor__filter-item editor__filter-item--fill">Заливка</li>
+            <li class="editor__filter-item editor__filter-item--contrast">Контрастность</li>
+          </ul>
+          <div class="editor__scale">
+            <div class="aditor__bar"></div>
+            <div class="editor__toggle"></div>
+          </div>
+          <button class="editor__button editor__button--upload" type="submit">Запостить</button>
+          <button class="editor__button editor__button--cancel" type="button">Отмена</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+      </a>
+
+      <ul class="social page-footer__social">
+        <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com/pinkapp">Наша страница в Твиттере</a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="https://www.facebook.com/pinkapp">Наша страница на Фейсбук</a></li>
+        <li class="social__item"><a class="social__link social__link--youtube" href="https://www.youtube.com/channel/pinkapp">Наша страница на Ютьюб</a></li>
+      </ul>
+
+      <div class="copyright page-footer__copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
