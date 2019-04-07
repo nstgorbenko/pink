@@ -4,15 +4,13 @@
     <meta charset="utf-8">
     <title>Pink</title>
   </head>
-  <body>
-    <header class="page-header">
-      <nav class="main-navigation">
-        <div class="main-navigation__header">
-          <a class="main-navigation__logo">
-            <img class="main-navigation__logo-image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
-          </a>
-          <span class="main-navigation__button">Открыть меню</span>
-        </div>
+  <body class="page">
+    <header class="main-header page__header">
+      <nav class="main-navigation main-header__navigation">
+        <a class="text-logo main-navigation__logo">
+          <img class="text-logo__image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+        </a>
+        <button class="main-navigation__button" type="button">Открыть меню</button>
         <ul class="site-list main-navigation__list">
           <li class="site-list__item"><a class="site-list__link">Главная</a></li>
           <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
@@ -20,28 +18,29 @@
           <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
       </nav>
-    </header>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">Мобильное приложение для обработки фото «Pink»</h1>
-      <section class="download-app">
+      <section class="download-app main-header__download">
         <h2 class="visually-hidden">Скачать приложение</h2>
         <a class="download-app__button" href="https://itunes.apple.com/ru/app/pink">Скачать приложение</a>
-        <ul class="download-app__list">
-          <li class="download-app__item">
-            <a class="download-app__link download-app__link--ios" href="https://itunes.apple.com/ru/app/pink">Pink для iPhone</a>
+        <ul class="download-list download-app__list">
+          <li class="download-list__item">
+            <a class="download-list__link download-list__link--ios" href="https://itunes.apple.com/ru/app/pink">Pink для iPhone</a>
           </li>
-          <li class="download-app__item">
-              <a class="download-app__link download-app__link--android" href="https://play.google.com/store/apps/pink">Pink для Android</a>
+          <li class="download-list__item">
+              <a class="download-list__link download-list__link--android" href="https://play.google.com/store/apps/pink">Pink для Android</a>
           </li>
-          <li class="download-app__item">
-              <a class="download-app__link download-app__link--windows" href="https://www.microsoft.com/store/apps/pink/">Pink для Windows Phone</a>
+          <li class="download-list__item">
+              <a class="download-list__link download-list__link--windows" href="https://www.microsoft.com/store/apps/pink/">Pink для Windows Phone</a>
           </li>
         </ul>
         <p class="download-app__about">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
+    </header>
 
-      <section class="features">
+    <main class="main page__main">
+      <h1 class="visually-hidden">Мобильное приложение для обработки фото «Pink»</h1>
+
+      <section class="features main__features">
         <header class="features__header">
           <h2 class="visually-hidden">Характеристики приложения</h2>
           <p class="features__intro">Устали от серости мегаполиса?</p>
@@ -63,22 +62,24 @@
         </ul>
       </section>
 
-      <section class="reviews slider">
+      <section class="reviews main__reviews slider">
         <h2 class="visually-hidden">Отзывы</h2>
-        <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author">Николай Петров</cite>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-        </div>
-        <p class="slider__toggles reviews__toggles">
-          <span class="slider__toggle">1</span>
-          <span class="slider__toggle">2</span>
-          <span class="slider__toggle">3</span>
-        </p>
+        <ul class="reviews__list slider__list">
+          <li class="reviews__item slider__item">
+            <blockquote class="reviews__quote">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </li>
+        </ul>
+        <ul class="reviews__toggles slider__toggles">
+          <li class="slider__toggle">1</li>
+          <li class="slider__toggle">2</li>
+          <li class="slider__toggle">3</li>
+        </ul>
       </section>
 
-      <section class="tariffs">
+      <section class="tariffs main__tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="tariffs__table">
           <tr>
@@ -111,32 +112,34 @@
             <td class="tariffs__info"></td>
           </tr>
         </table>
-        <p class="tariffs__toggles">
-          <span class="tariffs__toggle">1</span>
-          <span class="tariffs__toggle">2</span>
-          <span class="tariffs__toggle">3</span>
-        </p>
+        <ul class="tariffs__toggles">
+          <li class="tariffs__toggle">1</li>
+          <li class="tariffs__toggle">2</li>
+          <li class="tariffs__toggle">3</li>
+        </ul>
       </section>
 
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
+      <address class="contacts main__contacts">
         <p class="contacts__lead">Остались вопросы? Свяжитесь с нами!</p>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <p class="contacts__item-way">Звоните:</p>
-            <a class="contacts__item-link" href="tel: +78125556666">+7 (812) 555-66-66</a>
+            <p class="contacts__item-way">Звоните:
+              <a class="contacts__item-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </p>
           </li>
           <li class="contacts__item">
-            <p class="contacts__item-way">Пишите:</p>
-            <a class="contacts__item-link" href="mailto: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <p class="contacts__item-way">Пишите:
+              <a class="contacts__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
           </li>
           <li class="contacts__item">
-            <p class="contacts__item-way">Приезжайте в гости:</p>
-            <a class="contacts__item-link" href="tel:+78125556666">ул. Большая Конюшенная, 19/8</a>
+            <p class="contacts__item-way">Приезжайте в гости:
+              <a class="contacts__item-link" href="#">ул. Большая Конюшенная, 19/8</a>
+            </p>
           </li>
         </ul>
         <div class="contacts__map"></div>
-      </section>
+      </address>
     </main>
   </body>
 </html>
