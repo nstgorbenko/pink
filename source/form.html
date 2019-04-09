@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Pink. Конкурс</title>
+  </head>
+  <body class="page">
+    <header class="main-header page__header">
+      <nav class="main-navigation main-header__navigation">
+        <a class="text-logo main-navigation__logo" href="index.html">
+          <img class="text-logo__image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+        </a>
+        <button class="main-navigation__button" type="button">Открыть меню</button>
+        <ul class="site-list main-navigation__list">
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
+          <li class="site-list__item"><a class="site-list__link">Конкурс</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </header>
+
+    <main class="main page__main">
+      <p class="main__lead">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+
+      <form class="letter main__letter" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="letter__part letter__part--white">
+          <p class="letter__item">
+            <label class="letter__item-name" for="surname">Фамилия:</label>
+            <input class="letter__item-field" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+          </p>
+          <p class="letter__item">
+            <label class="letter__item-name" for="name">Имя:</label>
+            <input class="letter__item-field" type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
+          </p>
+          <p class="letter__item">
+            <label class="letter__item-name" for="patronymic">Отчество:</label>
+            <input class="letter__item-field" type="text" name="ptronymic" id="patronymic" placeholder="Ну и отчество тоже">
+          </p>
+        </fieldset>
+
+        <fieldset class="letter__part letter__part--gray">
+          <legend class="letter__part-name">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="letter__checkbox-list">
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="shark" id="shark" checked>
+              <label class="letter__checkbox-name" for="shark">Сделал селфи с акулой</label>
+            </li>
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="sunburn" id="sunburn" checked>
+              <label class="letter__checkbox-name" for="sunburn">Обгорел на пляже</label>
+            </li>
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="norris" id="norris">
+              <label class="letter__checkbox-name" for="norris">Видел Чака Норриса</label>
+            </li>
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="souveniers" id="souveniers">
+              <label class="letter__checkbox-name" for="souveniers">Накупил сувениров</label>
+            </li>
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="tower" id="tower" checked>
+              <label class="letter__checkbox-name" for="tower">Удержал башню</label>
+            </li>
+            <li class="letter__checkbox">
+              <input class="letter__checkbox-item" type="checkbox" name="hotel" id="hotel">
+              <label class="letter__checkbox-name" for="hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="letter__part letter__part--white">
+          <p class="letter__item">
+            <label class="letter__item-name" for="phone">Номер телефона</label>
+            <input class="letter__item-field" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+          </p>
+          <p class="letter__item">
+            <label class="letter__item-name" for="email">Адрес почты</label>
+            <input class="letter__item-field" type="email" name="email" id="email" placeholder="Введите почту *" required>
+          </p>
+        </fieldset>
+
+        <fieldset class="letter__part letter__part--gray">
+          <legend class="letter__part-name">С каким приложением путешествовали?</legend>
+          <ul class="letter__radio-list">
+            <li class="letter__radio">
+              <input class="letter__radio-item" type="radio" name="ios" id="ios" checked>
+              <label class="letter__radio-name" for="ios">Pink для iOS</label>
+            </li>
+            <li class="letter__radio">
+              <input class="letter__radio-item" type="radio" name="android" id="android">
+              <label class="letter__radio-name" for="android">Pink на Android</label>
+            </li>
+            <li class="letter__radio">
+              <input class="letter__radio-item" type="radio" name="windows" id="windows">
+              <label class="letter__radio-name" for="windows">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="letter__part letter__part--white">
+          <label class="letter__part-name" for="message">Опишите свои эмоции</label>
+          <textarea class="letter__item-field" name="message" id="message" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+
+        <button class="letter__button">Отправить форму</button>
+        <p class="letter__note">* — обязательные поля</p>
+      </form>
+    </main>
+
+    <footer class="main-footer page__footer">
+      <a class="logo main-footer__logo" href="index.html">
+        <img class="logo__image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+      </a>
+
+      <ul class="social main-footer__social">
+        <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com/pinkapp">Наша страница в Твиттере</a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="https://www.facebook.com/pinkapp">Наша страница на Фейсбук</a></li>
+        <li class="social__item"><a class="social__link social__link--youtube" href="https://www.youtube.com/channel/pinkapp">Наша страница на Ютьюб</a></li>
+      </ul>
+
+      <p class="copyright main-footer__copyright">Разработано
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </p>
+    </footer>
+  </body>
+</html>
