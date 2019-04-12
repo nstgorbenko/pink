@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Pink</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="main-header page__header">
       <nav class="main-navigation main-header__navigation">
         <a class="text-logo main-navigation__logo">
-          <img class="text-logo__image" src="img/" width="" height="" alt="Логотип мобильного приложения «Pink»">
+          <img class="text-logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип мобильного приложения «Pink»">
         </a>
-        <button class="main-navigation__button" type="button">Открыть меню</button>
-        <ul class="site-list main-navigation__list">
+        <button class="main-navigation__button" type="button" aria-label="Открыть меню"></button>
+        <ul class="site-list main-navigation__list list-reset">
           <li class="site-list__item"><a class="site-list__link">Главная</a></li>
           <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
           <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
@@ -22,15 +23,15 @@
       <section class="download-app main-header__download">
         <h2 class="visually-hidden">Скачать приложение</h2>
         <a class="download-app__button" href="https://itunes.apple.com/ru/app/pink">Скачать приложение</a>
-        <ul class="download-list download-app__list">
+        <ul class="download-list download-app__list list-reset">
           <li class="download-list__item">
-            <a class="download-list__link download-list__link--ios" href="https://itunes.apple.com/ru/app/pink">Pink для iPhone</a>
+            <a class="download-list__link download-list__link--ios" href="https://itunes.apple.com/ru/app/pink" aria-label="Pink для iPhone"></a>
           </li>
           <li class="download-list__item">
-              <a class="download-list__link download-list__link--android" href="https://play.google.com/store/apps/pink">Pink для Android</a>
+              <a class="download-list__link download-list__link--android" href="https://play.google.com/store/apps/pink" aria-label="Pink для Android"></a>
           </li>
           <li class="download-list__item">
-              <a class="download-list__link download-list__link--windows" href="https://www.microsoft.com/store/apps/pink/">Pink для Windows Phone</a>
+              <a class="download-list__link download-list__link--windows" href="https://www.microsoft.com/store/apps/pink/" aria-label="Pink для Windows Phone"></a>
           </li>
         </ul>
         <p class="download-app__about">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -46,7 +47,7 @@
           <p class="features__intro">Устали от серости мегаполиса?</p>
           <p class="features__intro">Нам есть, что вам предложить!</p>
         </header>
-        <ul class="features__list">
+        <ul class="features__list list-reset">
           <li class="features__item">
             <p class="features__lead">Поднимает настроение</p>
             <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -64,7 +65,7 @@
 
       <section class="reviews main__reviews slider">
         <h2 class="visually-hidden">Отзывы</h2>
-        <ul class="reviews__list slider__list">
+        <ul class="reviews__list slider__list list-reset">
           <li class="reviews__item slider__item">
             <blockquote class="reviews__quote">
               <cite class="reviews__author">Николай Петров</cite>
@@ -72,7 +73,7 @@
             </blockquote>
           </li>
         </ul>
-        <ul class="reviews__toggles slider__toggles">
+        <ul class="reviews__toggles slider__toggles list-reset">
           <li class="slider__toggle">1</li>
           <li class="slider__toggle">2</li>
           <li class="slider__toggle">3</li>
@@ -112,7 +113,7 @@
             <td class="tariffs__info"></td>
           </tr>
         </table>
-        <ul class="tariffs__toggles">
+        <ul class="tariffs__toggles list-reset">
           <li class="tariffs__toggle">1</li>
           <li class="tariffs__toggle">2</li>
           <li class="tariffs__toggle">3</li>
@@ -121,7 +122,7 @@
 
       <address class="contacts main__contacts">
         <p class="contacts__lead">Остались вопросы? Свяжитесь с нами!</p>
-        <ul class="contacts__list">
+        <ul class="contacts__list list-reset">
           <li class="contacts__item">
             <p class="contacts__item-way">Звоните:
               <a class="contacts__item-link" href="tel:+78125556666">+7 (812) 555-66-66</a>

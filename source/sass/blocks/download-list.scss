@@ -1,0 +1,13 @@
+.download-list__link {
+  &--ios {
+    background: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background: url("../img/logo-android.svg");
+  }
+
+  &--windows {
+    background: url("../img/logo-microsoft.svg");
+  }
+}

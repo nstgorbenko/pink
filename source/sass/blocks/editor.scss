@@ -1,0 +1,41 @@
+.editor {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.editor__filters-button {
+  border: none;
+
+  &--crop {
+    background: url("../img/icon-editor-crop.svg") no-repeat;
+  }
+
+  &--fill {
+    background: url("../img/icon-editor-fill.svg") no-repeat;
+  }
+
+  &--contrast {
+    background: url("../img/icon-editor-contrast.svg") no-repeat;
+  }
+}
+
+.editor__button {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: #ffffff;
+
+  &--upload {
+    color: #d22856;
+    border: 3px solid #d22856;
+  }
+
+  &--cancel {
+    color: rgba(40, 54, 69, 0.1);
+    border: 3px solid rgba(40, 54, 69, 0.1);
+  }
+}

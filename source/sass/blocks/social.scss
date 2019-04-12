@@ -1,0 +1,15 @@
+.social__link {
+  border: 2px solid #fefefe;
+
+  &--twitter {
+    background: #ffffff url("../img/icon-twitter.svg") no-repeat;
+  }
+
+  &--facebook {
+    background: #ffffff url("../img/icon-facebook.svg") no-repeat;
+  }
+
+  &--youtube {
+    background: #ffffff url("../img/icon-youtube.svg") no-repeat;
+  }
+}

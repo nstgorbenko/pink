@@ -1,0 +1,45 @@
+.photo {
+  background-color: #ffffff;
+}
+
+.photo__note {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #d22856;
+}
+
+.photo__about {
+  margin: 0 20px;
+  background-color: #f2f2f2;
+}
+
+.photo__author {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #283645;
+}
+
+.photo__time {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #283645;
+}
+
+.photo__comment {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+
+.photo__like {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #d22856;
+}
