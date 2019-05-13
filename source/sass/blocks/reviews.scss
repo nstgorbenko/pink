@@ -1,20 +1,231 @@
 .reviews {
-  padding: 30px 22px;
+  text-align: center;
   background-color: #ffffff;
 }
 
+.reviews__toggle {
+  display: none;
+}
+
+.reviews__quote {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
 .reviews__author {
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
-  text-align: center;
   color: #000000;
+  font-style: normal;
+}
+
+.reviews__author-about {
+  display: none;
 }
 
 .reviews__text {
+  margin: 14px 0;
   font-size: 14px;
   line-height: 30px;
-  text-align: center;
   color: #283645;
+}
+
+@media (max-width: $desktop-width) {
+  .reviews__wrapper {
+    position: relative;
+    min-height: 310px;
+  }
+
+  .reviews__controls {
+    position: absolute;
+    bottom: 42px;
+    left: calc(50% - 31px);
+    z-index: 10;
+    width: 62px;
+    height: 12px;
+    font-size: 0;
+  }
+
+  .reviews__control {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 13px;
+    background: #bec2c7;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background: #7f8891;
+    }
+
+    &:active {
+      background: #eaebed;
+    }
+  }
+
+  .reviews__toggle--1:checked ~ .reviews__controls .reviews__control--1,
+  .reviews__toggle--2:checked ~ .reviews__controls .reviews__control--2,
+  .reviews__toggle--3:checked ~ .reviews__controls .reviews__control--3 {
+    background: #ffffff;
+    border: 3px solid #283645;
+  }
+
+  .reviews__item {
+    display: none;
+  }
+
+  .reviews__toggle--1:checked ~ .reviews__list .reviews__item--1,
+  .reviews__toggle--2:checked ~ .reviews__list .reviews__item--2,
+  .reviews__toggle--3:checked ~ .reviews__list .reviews__item--3 {
+    display: block;
+  }
+
+  .reviews__arrow {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__wrapper {
+    min-height: 279px;
+    // box-sizing: border-box;
+  }
+
+  .reviews__text {
+    order: -1;
+    margin: 25px 0;
+    font-size: 18px;
+  }
+
+  .reviews__author {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .reviews__author-about {
+    display: block;
+    margin: 0;
+    margin-top: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+  }
+
+  .reviews__controls {
+    bottom: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__quote {
+    margin-left: 2px;
+  }
+
+  .reviews__list {
+    padding-top: 117px;
+    padding-bottom: 20px;
+  }
+
+  .reviews__author {
+    margin-top: 11px;
+    font-size: 24px;
+  }
+
+  .reviews__author-about {
+    margin-top: 2px;
+    font-size: 18px;
+  }
+
+  .reviews__text {
+    margin-top: 27px;
+  }
+
+  .reviews__controls {
+    display: none;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+    width: 700px;
+    min-height: 285px;
+    margin: 0 auto;
+    padding-top: 85px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: calc(50% - 37px);
+      width: 79px;
+      height: 65px;
+      background: url("../img/icon-quotes.svg") no-repeat 0 0;
+    }
+  }
+
+  .reviews__item {
+    position: absolute;
+    top: 117px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .reviews__arrow {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 22px;
+    height: 41px;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews__arrow--prev {
+    left: -119px;
+    background: url("../img/icon-review-arrow-left.svg") no-repeat 0 0;
+  }
+
+  .reviews__arrow--next {
+    right: -121px;
+    background: url("../img/icon-review-arrow-right.svg") no-repeat 0 0;
+  }
+
+  .reviews__item--1 {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .reviews__toggle--2:target ~ .reviews__list .reviews__item--1,
+  .reviews__toggle--3:target ~ .reviews__list .reviews__item--1 {
+    opacity: 0;
+  }
+
+  .reviews__toggle--1:target ~ .reviews__list .reviews__item--1,
+  .reviews__toggle--2:target ~ .reviews__list .reviews__item--2,
+  .reviews__toggle--3:target ~ .reviews__list .reviews__item--3 {
+    z-index: 2;
+    opacity: 1;
+  }
 }
