@@ -1,15 +1,180 @@
+.main__contacts {
+  position: relative;
+  padding-top: 41px;
+}
+
 .main__lead {
+  margin: 0;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: #283645;
   background-color: #ffffff;
+
+  &--form {
+    padding: 29px 20px 30px;
+  }
+
+  &--photo {
+    padding: 29px 35px 48px;
+  }
+}
+
+.main__lead-form {
+  display: none;
+}
+
+.main__reviews {
+  position: relative;
+  z-index: 1;
+  padding: 42px 20px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    height: 100%;
+    background: inherit;
+    transform: skewY(-4.5deg);
+    transform-origin: 100%;
+  }
+}
+
+.main__editor {
+  padding: 18px;
+  padding-bottom: 27px;
 }
 
 .main__tariffs {
-  margin-top: 30px;
+  position: relative;
+  width: 320px;
+  margin: 0;
+  padding: 91px 0 100px;
 }
 
-.main__contacts {
-  margin-bottom: 30px;
+
+@media (min-width: $tablet-width) {
+  .main__contacts {
+    padding-top: 46px;
+  }
+
+  .main__editor {
+    padding: 17px 18px 27px 20px;
+  }
+
+  .main__lead {
+    margin-bottom: 70px;
+    padding: 58px;
+    padding-bottom: 0;
+    font-size: 18px;
+
+    &--photo {
+      padding-top: 60px;
+    }
+  }
+
+  .main__lead-form {
+    display: block;
+  }
+
+  .main__letter {
+    margin-bottom: 36px;
+  }
+
+  .main__reviews {
+    padding-top: 38px;
+  }
+
+  .main__science {
+    position: relative;
+    padding: 61px 0;
+    padding-left: 329px;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 59px;
+      left: 21px;
+      width: 238px;
+      height: 276px;
+      padding-top: 139px;
+    }
+  }
+
+  .main__tariffs {
+    width: 620px;
+    padding: 88px 20px 67px;
+  }
+
+  .main__photos {
+    padding-top: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__contacts {
+    padding: 0;
+  }
+
+  .main__lead {
+    box-sizing: border-box;
+    width: 940px;
+    margin: 0 auto;
+    padding: 92px;
+    padding-bottom: 70px;
+
+    &--photo {
+      padding: 92px 155px 88px;
+    }
+  }
+
+  .main__lead-form {
+    display: inline-block;
+  }
+
+  .main__science {
+    position: static;
+    padding: 0;
+    padding-bottom: 64px;
+  }
+
+  .main__reviews {
+    padding-top: 41px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+
+    &::after {
+      transform: skewY(-3.9deg);
+    }
+  }
+
+  .main__editor {
+    box-sizing: border-box;
+    width: 940px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    padding: 17px 60px 30px 80px;
+  }
+
+  .main__letter {
+    box-sizing: border-box;
+    width: 940px;
+    margin: 0 auto;
+    margin-bottom: -15px;
+  }
+
+  .main__tariffs {
+    width: auto;
+    padding: 0;
+  }
+
+  .main__photos {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

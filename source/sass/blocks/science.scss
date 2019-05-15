@@ -1,0 +1,114 @@
+.science {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .science {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+
+    &::before {
+      font-weight: 700;
+      font-size: 96px;
+      text-align: center;
+      color: #d22856;
+      background-image: url("../../img/icon-editor-diagram-fill.svg"), url("../../img/icon-timer.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 18px 55px, 0 0;
+      background-size: 202px 202px, 238px 276px;
+    }
+  }
+
+  .science__intro {
+    margin: 0;
+    padding-top: 35px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+  }
+
+  .science__intro span {
+    display: block;
+  }
+
+  .science__text {
+    width: 300px;
+    margin: 0;
+    margin-top: 10px;
+    color: #283645;
+  }
+
+  .science__text .tablet-break {
+    display: block;
+  }
+
+  .science__link {
+    display: inline-block;
+    margin-top: 11px;
+    color: #d22856;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .science {
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .science__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 367px;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      width: 298px;
+      height: 345px;
+      padding-top: 174px;
+      font-weight: 700;
+      font-size: 120px;
+      text-align: center;
+      color: #d22856;
+      background-image: url("../../img/icon-editor-diagram-fill.svg"), url("../../img/icon-timer.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 23px 69px, 1px 0;
+      background-size: 253px 253px, 298px 345px;
+    }
+  }
+
+  .science__intro span {
+    display: inline;
+  }
+
+  .science__text {
+    width: 530px;
+    margin-top: 20px;
+  }
+
+  .science__text .tablet-break {
+    display: inline;
+  }
+
+  .science__text .desktop-break {
+    display: block;
+  }
+
+  .science__link {
+    min-width: 200px;
+    margin-top: 30px;
+  }
+}

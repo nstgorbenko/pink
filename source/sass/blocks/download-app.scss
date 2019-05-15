@@ -1,21 +1,121 @@
 .download-app {
-  padding: 25px 20px;
-  background-color: #1e2631;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1d2631;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+}
+
+.download-app__wrapper {
+  width: 280px;
+  padding: 27px 19px 15px;
+  background-color: #1d2631;
+}
+
+.download-app__promo {
+  display: none;
 }
 
 .download-app__button {
-  font-size: 18px;
+  display: block;
+  padding: 14px 0 17px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 18px;
-  text-align: center;
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #d22856;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.download-app__list {
+  width: 210px;
+  height: 56px;
+  margin-top: 32px;
+  margin-left: 38px;
 }
 
 .download-app__about {
-  font-size: 14px;
+  margin-top: 23px;
   font-weight: 300;
+  font-size: 14px;
   line-height: 24px;
-  text-align: center;
-  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .download-app {
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .download-app__promo {
+    display: block;
+    margin: 0;
+    padding: 0 30px;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .download-app__wrapper {
+    width: 300px;
+    padding-top: 30px;
+    padding-left: 20px;
+    background-color: transparent;
+  }
+
+  .download-app__button {
+    margin-top: 31px;
+  }
+
+  .download-app__list {
+    margin-top: 46px;
+    margin-left: 46px;
+  }
+
+  .download-app__about {
+    margin-top: 37px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download-app {
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .download-app__wrapper {
+    padding: 28px 0;
+  }
+
+  .download-app__promo {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .download-app__button {
+    margin-top: 51px;
+    font-size: 21px;
+    line-height: 19px;
+  }
+
+  .download-app__list {
+    margin-top: 66px;
+    margin-left: 47px;
+  }
+
+  .download-app__about {
+    margin-top: 56px;
+  }
 }

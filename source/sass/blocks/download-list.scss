@@ -1,13 +1,42 @@
+.download-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.download-list__item {
+  width: 47px;
+}
+
 .download-list__link {
+  display: block;
+  height: 56px;
+
   &--ios {
-    background: url("../img/logo-apple.svg");
+    background: url("../img/logo-apple.svg") no-repeat 0 0;
   }
 
   &--android {
-    background: url("../img/logo-android.svg");
+    background: url("../img/logo-android.svg") no-repeat 0 9px;
   }
 
   &--windows {
-    background: url("../img/logo-microsoft.svg");
+    background: url("../img/logo-microsoft.svg") no-repeat 0 12px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .download-list__link {
+    &--android {
+      background: url("../img/logo-android.svg") no-repeat 1px 6px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download-list__link {
+    &--android {
+      background: url("../img/logo-android.svg") no-repeat 1px 8px;
+    }
   }
 }

@@ -3,3 +3,42 @@
   line-height: 18px;
   color: #283645;
 }
+
+.copyright__link {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  outline: none;
+}
+
+.copyright__link:focus .copyright__logo {
+  fill: #283645;
+}
+
+.copyright__logo {
+  fill: #d22856;
+
+  &:hover {
+    fill: #283645;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    font-size: 18px;
+  }
+
+  .copyright__link {
+    top: -3px;
+  }
+}

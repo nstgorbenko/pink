@@ -1,4 +1,5 @@
-@import "blocks/list-reset";
+@import "blocks/variables";
+@import "blocks/scaffolding";
 @import "blocks/contacts";
 @import "blocks/copyright";
 @import "blocks/download-app";
@@ -6,7 +7,6 @@
 @import "blocks/editor";
 @import "blocks/features";
 @import "blocks/letter";
-@import "blocks/logo";
 @import "blocks/main-footer";
 @import "blocks/main-header";
 @import "blocks/main-navigation";
@@ -14,9 +14,8 @@
 @import "blocks/page";
 @import "blocks/photo";
 @import "blocks/reviews";
+@import "blocks/science";
 @import "blocks/site-list";
 @import "blocks/social";
 @import "blocks/tariffs";
-@import "blocks/text-logo";
 @import "blocks/user-photos";
-@import "blocks/visually-hidden";

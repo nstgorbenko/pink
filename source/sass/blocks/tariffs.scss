@@ -1,37 +1,247 @@
 .tariffs {
-  padding: 50px 0;
+  overflow: hidden;
   background-color: #f2f2f2;
 }
 
 .tariffs__table {
+  border-collapse: collapse;
   background-color: #ffffff;
 }
 
 .tariffs__title {
+  min-width: 246px;
+  padding: 15px;
+  padding-bottom: 19px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
   background-color: #293646;
+
+  &:nth-child(3) {
+    border-right: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+  }
+
+  &--unseen {
+    background-color: #f2f2f2;
+  }
+
+  &--hit {
+    position: relative;
+    z-index: 10;
+    background: #293646 url("../../img/bg-hit.svg") no-repeat 0 0;
+    background-size: 70px 70px;
+
+    &::before {
+      content: "хит";
+      position: absolute;
+      top: 15px;
+      left: -3px;
+      width: 50px;
+      height: 21px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .tariffs__name {
-  font-size: 18px;
+  margin: 0;
   font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
 }
 
 .tariffs__price {
-  font-size: 24px;
+  margin: 0;
   font-weight: 300;
-  line-height: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
+  font-size: 24px;
+  line-height: 34px;
 }
 
 .tariffs__info {
+  padding: 14px 22px;
   font-size: 14px;
   line-height: 30px;
-  text-transform: uppercase;
   color: #283645;
+  text-transform: uppercase;
+  border: 2px solid #e5e5e5;
+
+  &--yes {
+    background: url("../img/icon-yes.svg") no-repeat 93% 50%;
+    background-size: 31px 21px;
+  }
+
+  &--no {
+    background: url("../img/icon-no.svg") no-repeat 92% 50%;
+    background-size: 27px 26px;
+  }
+}
+
+.tariffs__text {
+  margin: 0;
+}
+
+.tariffs__toggle {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .tariffs__table {
+    transform: translateX(-532px);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .tariffs__controls {
+    position: absolute;
+    bottom: 47px;
+    left: calc(50% - 31px);
+    z-index: 10;
+    width: 62px;
+    height: 12px;
+    font-size: 0;
+  }
+
+  .tariffs__control {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 13px;
+    background: #bec2c7;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background: #7f8891;
+    }
+
+    &:active {
+      background: #eaebed;
+    }
+  }
+
+  .tariffs__toggle--1:checked ~ .tariffs__controls .tariffs__control--1,
+  .tariffs__toggle--2:checked ~ .tariffs__controls .tariffs__control--2,
+  .tariffs__toggle--3:checked ~ .tariffs__controls .tariffs__control--3 {
+    background: #ffffff;
+    border: 3px solid #283645;
+  }
+
+  .tariffs__toggle--1:checked ~ .tariffs__table {
+    transform: translateX(-255px);
+  }
+
+  .tariffs__toggle--2:checked ~ .tariffs__table {
+    transform: translateX(-532px);
+  }
+
+  .tariffs__toggle--3:checked ~ .tariffs__table {
+    transform: translateX(-809px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs__title {
+    min-width: 130px;
+    padding: 12px;
+
+    &--hit {
+      background: #293646 url("../../img/bg-hit-tablet.svg") no-repeat 2px 0;
+      background-size: 60px 60px;
+
+      &::before {
+        top: 8px;
+        left: 1px;
+        width: 40px;
+        height: 21px;
+      }
+    }
+  }
+
+  .tariffs__name {
+    font-size: 16px;
+  }
+
+  .tariffs__price {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .tariffs__info {
+    padding: 5px 0 10px 15px;
+    text-transform: none;
+
+    &--yes {
+      background: url("../img/icon-yes.svg") no-repeat 50% 50%;
+      background-size: 31px 21px;
+    }
+
+    &--no {
+      background: url("../img/icon-no.svg") no-repeat 51% 45%;
+      background-size: 27px 26px;
+    }
+  }
+
+  .tariffs__text {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 141px 0 96px;
+  }
+
+  .tariffs__title {
+    min-width: 204px;
+    padding: 16px 15px;
+
+    &--hit {
+      background: #293646 url("../../img/bg-hit.svg") no-repeat -1px 0;
+      background-size: 75px 76px;
+
+      &::before {
+        top: 15px;
+        left: 0;
+        width: 50px;
+        height: 21px;
+      }
+    }
+  }
+
+  .tariffs__name {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .tariffs__price {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .tariffs__info {
+    padding: 14px 22px;
+    font-size: 18px;
+
+    &--yes {
+      background: url("../img/icon-yes.svg") no-repeat 50% 60%;
+      background-size: 31px 21px;
+    }
+
+    &--no {
+      background: url("../img/icon-no.svg") no-repeat 50% 50%;
+      background-size: 27px 26px;
+    }
+  }
 }
