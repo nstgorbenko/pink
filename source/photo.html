@@ -4,24 +4,30 @@
     <meta charset="utf-8">
     <title>Pink. Фотографии пользователей</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body class="page">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="main-header page__header">
       <nav class="main-navigation main-navigation--closed main-navigation--nojs main-header__navigation">
         <div class="main-navigation__wrapper">
           <div class="main-navigation__header">
             <a class="main-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
               <svg class="main-navigation__logo-image" width="75" height="23" focusable="false">
-                <use class="main-navigation__logo-mobile" xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
-                <use class="main-navigation__logo-tablet" xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
-                <use class="main-navigation__logo-desktop" xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+                <use class="main-navigation__logo-mobile" xlink:href="#logo-pink-white-mobile"></use>
+                <use class="main-navigation__logo-tablet" xlink:href="#logo-pink-white-tablet"></use>
+                <use class="main-navigation__logo-desktop" xlink:href="#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="main-navigation__button" type="button" aria-label="Открыть/закрыть меню">
               <svg class="main-navigation__button-icon" width="50" height="24" focusable="false">
-                <use class="main-navigation__button-burger" xlink:href="img/sprite.svg#icon-menu-burger"></use>
-                <use class="main-navigation__button-cross" xlink:href="img/sprite.svg#icon-menu-cross"></use>
+                <use class="main-navigation__button-burger" xlink:href="#icon-menu-burger"></use>
+                <use class="main-navigation__button-cross" xlink:href="#icon-menu-cross"></use>
               </svg>
             </button>
           </div>
@@ -46,13 +52,13 @@
             <article class="photo photo--panorama user-photos__post user-photos__post--panorama">
               <a class="photo__link" href="img/panorama-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя Анна">
+                  <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фото пользователя Анна">
                 </picture>
                 <p class="photo__note">Панорама дня</p>
               </a>
@@ -67,13 +73,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-car-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x img/photo-car-mobile@2x.webp 2x,">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-car-mobile@1x.jpg" alt="Фото пользователя Левон">
+                  <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя Левон">
                 </picture>
               </a>
               <div class="photo__about">
@@ -87,13 +93,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-drumset-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-drumset-mobile@1x.jpg" alt="Фото пользователя Антон">
+                  <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото пользователя Антон">
                 </picture>
               </a>
               <div class="photo__about">
@@ -107,13 +113,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-window-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-window-mobile@1x.jpg" alt="Фото пользователя Борис">
+                  <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x,img/photo-window-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото пользователя Борис">
                 </picture>
               </a>
               <div class="photo__about">
@@ -127,13 +133,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-fair-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-fair-mobile@1x.jpg" alt="Фото пользователя Сергей">
+                  <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x,img/photo-fair-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фото пользователя Сергей">
                 </picture>
               </a>
               <div class="photo__about">
@@ -147,13 +153,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-pov-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-pov-mobile@1x.jpg" alt="Фото пользователя Максим">
+                  <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фото пользователя Максим">
                 </picture>
               </a>
               <div class="photo__about">
@@ -167,13 +173,13 @@
             <article class="photo user-photos__post">
               <a class="photo__link" href="img/photo-wing-desktop@1x.jpg" aria-label="Открыть в полном размере">
                 <picture>
-                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x">
-                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x">
-                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x">
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x">
-                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x">
-                  <img class="photo__preview" src="img/photo-wing-mobile@1x.jpg" alt="Фото пользователя Надежда">
+                  <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                  <img class="photo__preview" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фото пользователя Надежда">
                 </picture>
               </a>
               <div class="photo__about">
@@ -191,19 +197,19 @@
         <h2 class="visually-hidden">Редактор фотографий</h2>
         <form class="editor__form" method="post" action="https://echo.htmlacademy.ru">
           <picture>
-            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x">
-            <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x">
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
 
-            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x">
-            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x">
-            <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Пример фото">
+            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Пример фото">
           </picture>
           <ul class="editor__filters list-reset">
             <li class="editor__filters-item">
               <button class="editor__filters-button editor__filters-button--crop" type="button" aria-label="Обрезать">
                 <svg class="editor__filters-icon editor__filters-icon--crop" width="48" height="48" focusable="false">
-                  <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
+                  <use xlink:href="#icon-editor-crop"></use>
                 </svg>
               </button>
               <input class="editor__scale editor__scale--crop" type="range" min="0" max="100" step="1" value="85">
@@ -211,7 +217,7 @@
             <li class="editor__filters-item">
               <button class="editor__filters-button editor__filters-button--fill" type="button" aria-label="Заливка">
                 <svg class="editor__filters-icon editor__filters-icon--fill" width="48" height="48" focusable="false">
-                  <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
+                  <use xlink:href="#icon-editor-fill"></use>
                 </svg>
               </button>
               <input class="editor__scale editor__scale--fill" type="range" min="0" max="100" step="1" value="15">
@@ -219,7 +225,7 @@
             <li class="editor__filters-item">
               <button class="editor__filters-button editor__filters-button--contrast" type="button" aria-label="Контрастность">
                 <svg class="editor__filters-icon editor__filters-icon--contrast" width="33" height="33" focusable="false">
-                  <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
+                  <use xlink:href="#icon-editor-contrast"></use>
                 </svg>
               </button>
               <input class="editor__scale editor__scale--contrast" type="range" min="0" max="100" step="1" value="50">
@@ -236,8 +242,8 @@
     <footer class="main-footer page__footer">
       <a class="main-footer__logo" href="#" aria-label="Перейти на главную страницу">
         <svg class="main-footer__logo-image" width="147" height="40" focusable="false">
-          <use class="main-footer__logo-mobile" xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
-          <use class="main-footer__logo-desktop" xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+          <use class="main-footer__logo-mobile" xlink:href="#logo-pink-blue-mobile"></use>
+          <use class="main-footer__logo-desktop" xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
 
@@ -250,12 +256,12 @@
       <p class="copyright main-footer__copyright">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
           <svg class="copyright__logo" width="27" height="34" focusable="false">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </p>
     </footer>
 
-    <script src="js/navigation.js"></script>
+    <script src="js/navigation.min.js"></script>
   </body>
 </html>

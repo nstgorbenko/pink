@@ -38,7 +38,9 @@
   color: #d22856;
   text-decoration: none;
   outline: none;
+}
 
+a.contacts__item-link {
   &:hover,
   &:focus {
     color: #283645;
@@ -69,6 +71,11 @@
     height: 33px;
     background: url("../../img/bg-triangle-white-footer.svg") no-repeat 0 0;
     background-size: 320px 33px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-mobile@2x.png");
+    background-size: 36px 36px, 320px 645px;
   }
 }
 
@@ -120,6 +127,11 @@
       width: 660px;
       height: 68px;
       background-size: 660px 68px;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-tablet@2x.jpg");
+      background-size: 36px 36px, 700px 848px;
     }
   }
 
@@ -182,6 +194,11 @@
       width: 1200px;
       height: 107px;
       background-size: 1200px 107px;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-desktop@2x.jpg");
+      background-size: 36px 36px, 1200px 976px;
     }
   }
 

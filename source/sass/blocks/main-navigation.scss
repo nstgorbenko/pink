@@ -45,20 +45,17 @@
   cursor: pointer;
 }
 
-.main-navigation__button:focus .main-navigation__button-icon {
+.main-navigation__button:focus .main-navigation__button-icon,
+.main-navigation__button:hover .main-navigation__button-icon {
   fill: #d22856;
+}
+
+.main-navigation__button:active .main-navigation__button-icon {
+  opacity: 0.3;
 }
 
 .main-navigation__button-icon {
   fill: #ffffff;
-
-  &:hover {
-    fill: #d22856;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .main-navigation__list {

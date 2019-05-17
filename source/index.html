@@ -4,24 +4,30 @@
     <meta charset="utf-8">
     <title>Pink</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body class="page">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="main-header main-header--homepage page__header page__header--homepage">
       <nav class="main-navigation main-navigation--closed main-navigation--nojs main-header__navigation">
         <div class="main-navigation__wrapper">
           <div class="main-navigation__header">
             <a class="main-navigation__logo">
               <svg class="main-navigation__logo-image" width="75" height="23" focusable="false">
-                <use class="main-navigation__logo-mobile" xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
-                <use class="main-navigation__logo-tablet" xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
-                <use class="main-navigation__logo-desktop" xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+                <use class="main-navigation__logo-mobile" xlink:href="#logo-pink-white-mobile"></use>
+                <use class="main-navigation__logo-tablet" xlink:href="#logo-pink-white-tablet"></use>
+                <use class="main-navigation__logo-desktop" xlink:href="#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="main-navigation__button" type="button" aria-label="Открыть/закрыть меню">
               <svg class="main-navigation__button-icon" width="50" height="24" focusable="false">
-                <use class="main-navigation__button-burger" xlink:href="img/sprite.svg#icon-menu-burger"></use>
-                <use class="main-navigation__button-cross" xlink:href="img/sprite.svg#icon-menu-cross"></use>
+                <use class="main-navigation__button-burger" xlink:href="#icon-menu-burger"></use>
+                <use class="main-navigation__button-cross" xlink:href="#icon-menu-cross"></use>
               </svg>
             </button>
           </div>
@@ -69,21 +75,31 @@
         <ul class="features__screen list-reset">
           <li class="features__photo">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x">
-              <img class="features__photo-image" src="img/iphone-screen-1-tablet@1x.png" alt="">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/iphone-screen-1-tablet@1x.webp 1x, img/iphone-screen-1-tablet@2x.webp 2x">
+
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+              <img class="features__photo-image" src="img/iphone-screen-1-tablet@1x.png" srcset="img/iphone-screen-1-tablet@2x.png 2x" alt="">
             </picture>
           </li>
           <li class="features__photo">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png 1x">
-              <img class="features__photo-image" src="img/iphone-screen-2-tablet@1x.png" alt="">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/iphone-screen-2-tablet@1x.webp 1x, img/iphone-screen-2-tablet@2x.webp 2x">
+
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+              <img class="features__photo-image" src="img/iphone-screen-2-tablet@1x.png" srcset="img/iphone-screen-2-tablet@2x.png 2x" alt="">
             </picture>
           </li>
           <li class="features__photo">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x">
-              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x">
-              <img class="features__photo-image" src="img/iphone-screen-mobile@1x.png" alt="">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
+
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+              <img class="features__photo-image" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="">
             </picture>
           </li>
         </ul>
@@ -140,7 +156,7 @@
                 <cite class="reviews__author">Николай Петров
                   <span class="reviews__author-about">25 лет, водитель трамвая</span>
                 </cite>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <p class="reviews__text">«zЭто приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                 <a class="reviews__arrow reviews__arrow--prev" href="#reviews__toggle--1" aria-label="Предыдущий отзыв"></a>
                 <a class="reviews__arrow reviews__arrow--next" href="#reviews__toggle--3" aria-label="Следующий отзыв"></a>
               </blockquote>
@@ -150,7 +166,7 @@
                 <cite class="reviews__author">Николай Петров
                   <span class="reviews__author-about">25 лет, водитель трамвая</span>
                 </cite>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <p class="reviews__text">«xЭто приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                 <a class="reviews__arrow reviews__arrow--prev" href="#reviews__toggle--2" aria-label="Предыдущий отзыв"></a>
                 <a class="reviews__arrow reviews__arrow--next" href="#reviews__toggle--1" aria-label="Следующий отзыв"></a>
               </blockquote>
@@ -230,15 +246,15 @@
           </ul>
         </div>
         <div class="contacts__map">
-          <iframe class="contacts__map-online" src="https://yandex.ru/map-widget/v1/-/CCQSu85N" allowfullscreen></iframe>
+          <!-- <iframe class="contacts__map-online" src="https://yandex.ru/map-widget/v1/-/CCQSu85N" allowfullscreen></iframe> -->
         </div>
       </address>
 
       <footer class="main-footer main-footer--homepage page__footer">
         <a class="main-footer__logo">
           <svg class="main-footer__logo-image" width="147" height="40" focusable="false">
-            <use class="main-footer__logo-mobile" xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
-            <use class="main-footer__logo-desktop" xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+            <use class="main-footer__logo-mobile" xlink:href="#logo-pink-blue-mobile"></use>
+            <use class="main-footer__logo-desktop" xlink:href="#logo-pink-blue-desktop"></use>
           </svg>
         </a>
 
@@ -251,13 +267,13 @@
         <p class="copyright main-footer__copyright">Разработано
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__logo" width="27" height="34" focusable="false">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
         </p>
       </footer>
     </main>
 
-    <script src="js/navigation.js"></script>
+    <script src="js/navigation.min.js"></script>
   </body>
 </html>

@@ -4,24 +4,30 @@
     <meta charset="utf-8">
     <title>Pink. Конкурс</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body class="page">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="main-header page__header">
       <nav class="main-navigation main-navigation--closed main-navigation--nojs main-header__navigation">
         <div class="main-navigation__wrapper">
           <div class="main-navigation__header">
             <a class="main-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
               <svg class="main-navigation__logo-image" width="75" height="23" focusable="false">
-                <use class="main-navigation__logo-mobile" xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
-                <use class="main-navigation__logo-tablet" xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
-                <use class="main-navigation__logo-desktop" xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+                <use class="main-navigation__logo-mobile" xlink:href="#logo-pink-white-mobile"></use>
+                <use class="main-navigation__logo-tablet" xlink:href="#logo-pink-white-tablet"></use>
+                <use class="main-navigation__logo-desktop" xlink:href="#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="main-navigation__button" type="button" aria-label="Открыть/закрыть меню">
               <svg class="main-navigation__button-icon" width="50" height="24" focusable="false">
-                <use class="main-navigation__button-burger" xlink:href="img/sprite.svg#icon-menu-burger"></use>
-                <use class="main-navigation__button-cross" xlink:href="img/sprite.svg#icon-menu-cross"></use>
+                <use class="main-navigation__button-burger" xlink:href="#icon-menu-burger"></use>
+                <use class="main-navigation__button-cross" xlink:href="#icon-menu-cross"></use>
               </svg>
             </button>
           </div>
@@ -135,8 +141,8 @@
     <footer class="main-footer page__footer">
         <a class="main-footer__logo" href="index.html" aria-label="Перейти на главную страницу">
           <svg class="main-footer__logo-image" width="147" height="40" focusable="false">
-            <use class="main-footer__logo-mobile" xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
-            <use class="main-footer__logo-desktop" xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+            <use class="main-footer__logo-mobile" xlink:href="#logo-pink-blue-mobile"></use>
+            <use class="main-footer__logo-desktop" xlink:href="#logo-pink-blue-desktop"></use>
           </svg>
         </a>
 
@@ -149,7 +155,7 @@
         <p class="copyright main-footer__copyright">Разработано
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__logo" width="27" height="34" focusable="false">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="img/#logo-htmlacademy"></use>
             </svg>
           </a>
         </p>
@@ -171,7 +177,7 @@
       </div>
     </section>
 
-    <script src="js/navigation.js"></script>
-    <script src="js/letter.js"></script>
+    <script src="js/navigation.min.js"></script>
+    <script src="js/letter.min.js"></script>
   </body>
 </html>

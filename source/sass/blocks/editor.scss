@@ -66,7 +66,12 @@
 
   appearance: none;
 
-  &::-webkit-slider-thumb {
+  &:active::-moz-range-thumb {
+    background-color: #d22856;
+  }
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
     width: 14px;
     height: 14px;
     background-color: #ffffff;

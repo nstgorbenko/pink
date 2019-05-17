@@ -41,6 +41,7 @@
   font-size: 18px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
+  color: #283645;
   border: 2px solid #e5e5e5;
   outline: none;
 
@@ -48,8 +49,10 @@
     background-color: lightcoral;
   }
 
-  &::placeholder {
+  &::placeholder,
+  &::-ms-input-placeholder {
     color: #283645;
+    opacity: 1;
   }
 
   &:hover {
@@ -191,6 +194,7 @@
 
   &::placeholder {
     color: #283645;
+    opacity: 1;
   }
 
   &:hover {

@@ -41,9 +41,17 @@
     width: auto;
     max-width: 2560px;
 
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 2560px 853px;
+    }
+
     &--homepage {
       min-height: 854px;
       background-position: calc(50% + 71px) 209px, 50% 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-size: 1050px 645px, 2560px 853px;
+      }
     }
   }
 
