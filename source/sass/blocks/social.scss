@@ -1,18 +1,24 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 11px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__link {
   display: block;
   width: 46px;
   height: 46px;
-  margin-right: 11px;
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
-
-  &:nth-child(3) {
-    margin-right: 0;
-  }
 
   &--twitter {
     background: #ffffff url("../img/icon-twitter.svg") no-repeat 50% 50%;

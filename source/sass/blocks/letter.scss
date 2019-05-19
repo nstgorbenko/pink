@@ -29,6 +29,7 @@
 }
 
 .letter__item-name {
+  max-width: 180px;
   padding: 10px 20px 11px;
   font-size: 14px;
   line-height: 18px;
@@ -49,7 +50,11 @@
     background-color: lightcoral;
   }
 
-  &::placeholder,
+  &::placeholder {
+    color: #283645;
+    opacity: 1;
+  }
+
   &::-ms-input-placeholder {
     color: #283645;
     opacity: 1;
@@ -66,6 +71,8 @@
 }
 
 .letter__part-name {
+  max-width: 240px;
+  margin: 0 auto;
   padding: 40px 40px;
   font-size: 14px;
   line-height: 18px;
@@ -80,6 +87,7 @@
 
 .letter__checkbox-name,
 .letter__radio-name {
+  width: 210px;
   font-size: 18px;
   line-height: 35px;
   color: #283645;
@@ -185,9 +193,11 @@
   width: 280px;
   margin: -24px 19px 0;
   padding: 15px 18px 0;
+  overflow: auto;
   font-size: 18px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
+  color: #283645;
   border: 2px solid #e5e5e5;
   outline: none;
   resize: none;
@@ -209,6 +219,7 @@
 
 .letter__button {
   display: block;
+  max-width: 284px;
   margin: 0 auto;
   margin-top: 45px;
   padding: 17px 48px;
@@ -396,11 +407,18 @@
   }
 
   .letter__part-name {
+    max-width: 450px;
     padding: 0 25px;
+    text-align: center;
 
     &--gray {
       background-color: #ffffff;
     }
+  }
+
+  .letter__checkbox-name,
+  .letter__radio-name {
+    width: 550px;
   }
 
   .letter__radio-list {
@@ -464,6 +482,7 @@
 
   .letter__part--contacts .letter__item-field {
     flex-grow: 1;
+    max-height: 30px;
     margin-bottom: 15px;
     padding: 15px 18px;
   }
@@ -480,12 +499,15 @@
 
   .letter__footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     padding: 14px 20px;
   }
 
   .letter__button {
+    flex-shrink: 0;
+    max-width: 304px;
     margin: 0;
     padding: 17px 58px;
   }
@@ -550,7 +572,12 @@
     box-sizing: border-box;
     width: 435px;
     margin: 0;
+    margin-bottom: 40px;
     padding: 3px 16px 0;
+  }
+
+  .letter__part--os .letter__part-name {
+    max-width: 350px;
   }
 
   .letter__part--contacts {
@@ -563,6 +590,7 @@
 
   .letter__part-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -590,7 +618,14 @@
   }
 
   .letter__checkbox {
+    flex-grow: 0;
+    max-width: 230px;
     margin-right: 35px;
+  }
+
+  .letter__part--record .letter__checkbox-name {
+    width: 200px;
+    max-width: 200px;
   }
 
   .letter__part--message {
@@ -616,6 +651,7 @@
   }
 
   .letter__button {
+    max-width: 350px;
     margin: 0;
     padding: 17px 58px;
   }

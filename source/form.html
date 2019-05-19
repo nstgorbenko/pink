@@ -1,183 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Pink. Конкурс</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="js/picturefill.min.js" async></script>
-  </head>
-  <body class="page">
-    <div style="display: none;">
-      <include src="build/img/sprite.svg"></include>
-    </div>
 
-    <header class="main-header page__header">
-      <nav class="main-navigation main-navigation--closed main-navigation--nojs main-header__navigation">
-        <div class="main-navigation__wrapper">
-          <div class="main-navigation__header">
-            <a class="main-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
-              <svg class="main-navigation__logo-image" width="75" height="23" focusable="false">
-                <use class="main-navigation__logo-mobile" xlink:href="#logo-pink-white-mobile"></use>
-                <use class="main-navigation__logo-tablet" xlink:href="#logo-pink-white-tablet"></use>
-                <use class="main-navigation__logo-desktop" xlink:href="#logo-pink-white-desktop"></use>
-              </svg>
-            </a>
-            <button class="main-navigation__button" type="button" aria-label="Открыть/закрыть меню">
-              <svg class="main-navigation__button-icon" width="50" height="24" focusable="false">
-                <use class="main-navigation__button-burger" xlink:href="#icon-menu-burger"></use>
-                <use class="main-navigation__button-cross" xlink:href="#icon-menu-cross"></use>
-              </svg>
-            </button>
-          </div>
-          <ul class="site-list main-navigation__list list-reset">
-            <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
-            <li class="site-list__item"><a class="site-list__link site-list__link--current">Конкурс</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-          </ul>
-        </div>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Pink. Конкурс</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+  <script src="js/picturefill.min.js" async></script>
+</head>
 
-      <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    </header>
+<body class="page">
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
-    <main class="main page__main">
-      <p class="main__lead main__lead--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-        <span class="main__lead-form">Пожалуйста, заполните форму ниже:</span>
-      </p>
-
-      <form class="letter main__letter" method="post" action="https://echo.htmlacademy.ru" novalidate>
-        <fieldset class="letter__part letter__part--name letter__part--white">
-          <p class="letter__item">
-            <label class="letter__item-name" for="surname">Фамилия:</label>
-            <input class="letter__item-field" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
-          </p>
-          <p class="letter__item">
-            <label class="letter__item-name" for="name">Имя:</label>
-            <input class="letter__item-field" type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
-          </p>
-          <p class="letter__item">
-            <label class="letter__item-name" for="patronymic">Отчество:</label>
-            <input class="letter__item-field" type="text" name="ptronymic" id="patronymic" placeholder="Ну и отчество тоже">
-          </p>
-        </fieldset>
-
-        <fieldset class="letter__part letter__part--record letter__part--gray">
-          <legend class="letter__part-name letter__part-name--gray">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="letter__checkbox-list list-reset">
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="shark" id="shark" checked>
-              <label class="letter__checkbox-name" for="shark">Сделал селфи с акулой</label>
-            </li>
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="sunburn" id="sunburn" checked>
-              <label class="letter__checkbox-name" for="sunburn">Обгорел на пляже</label>
-            </li>
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="norris" id="norris">
-              <label class="letter__checkbox-name" for="norris">Видел Чака Норриса</label>
-            </li>
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="souveniers" id="souveniers">
-              <label class="letter__checkbox-name" for="souveniers">Накупил сувениров</label>
-            </li>
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="tower" id="tower" checked>
-              <label class="letter__checkbox-name" for="tower">Удержал башню</label>
-            </li>
-            <li class="letter__checkbox">
-              <input class="letter__checkbox-item visually-hidden" type="checkbox" name="hotel" id="hotel">
-              <label class="letter__checkbox-name" for="hotel">Разгромил отель</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="letter__part letter__part--contacts letter__part--white">
-          <legend class="letter__part-name">Контактная информация</legend>
-          <div class="letter__part-wrap">
-            <p class="letter__item letter__item--phone">
-              <label class="letter__item-name" for="phone">Номер телефона</label>
-              <input class="letter__item-field" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
-            </p>
-            <p class="letter__item letter__item--email">
-              <label class="letter__item-name" for="email">Адрес почты</label>
-              <input class="letter__item-field" type="email" name="email" id="email" placeholder="Введите почту *" required>
-            </p>
-          </div>
-        </fieldset>
-
-        <fieldset class="letter__part letter__part--os letter__part--gray">
-          <legend class="letter__part-name letter__part-name--gray">С каким приложением путешествовали?</legend>
-          <ul class="letter__radio-list list-reset">
-            <li class="letter__radio">
-              <input class="letter__radio-item visually-hidden" type="radio" name="os" value="ios" id="ios" checked>
-              <label class="letter__radio-name" for="ios">Pink для iOS</label>
-            </li>
-            <li class="letter__radio">
-              <input class="letter__radio-item visually-hidden" type="radio" name="os" value="android" id="android">
-              <label class="letter__radio-name" for="android">Pink на Android</label>
-            </li>
-            <li class="letter__radio">
-              <input class="letter__radio-item visually-hidden" type="radio" name="os" value="windows" id="windows">
-              <label class="letter__radio-name" for="windows">Windows Phone</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="letter__part letter__part--message letter__part--white">
-          <legend class="letter__part-name">Опишите свои эмоции</legend>
-            <textarea class="letter__message" name="message" id="message" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </fieldset>
-
-        <div class="letter__footer">
-          <button class="letter__button">Отправить форму</button>
-          <p class="letter__note"><span class="letter__note--star">*</span> — обязательные <span class="letter__note--more">для заполнения</span> поля</p>
-        </div>
-      </form>
-    </main>
-
-    <footer class="main-footer page__footer">
-        <a class="main-footer__logo" href="index.html" aria-label="Перейти на главную страницу">
-          <svg class="main-footer__logo-image" width="147" height="40" focusable="false">
-            <use class="main-footer__logo-mobile" xlink:href="#logo-pink-blue-mobile"></use>
-            <use class="main-footer__logo-desktop" xlink:href="#logo-pink-blue-desktop"></use>
-          </svg>
-        </a>
-
-        <ul class="social main-footer__social list-reset">
-          <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com/pinkapp" aria-label="Наша страница в Твиттере"></a></li>
-          <li class="social__item"><a class="social__link social__link--facebook" href="https://www.facebook.com/pinkapp" aria-label="Наша страница на Фейсбук"></a></li>
-          <li class="social__item"><a class="social__link social__link--youtube" href="https://www.youtube.com/channel/pinkapp" aria-label="Наша страница на Ютьюб"></a></li>
-        </ul>
-
-        <p class="copyright main-footer__copyright">Разработано
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-            <svg class="copyright__logo" width="27" height="34" focusable="false">
-              <use xlink:href="img/#logo-htmlacademy"></use>
+  <header class="main-header page__header">
+    <nav class="main-navigation main-navigation--closed main-navigation--nojs main-header__navigation">
+      <div class="main-navigation__wrapper">
+        <div class="main-navigation__header">
+          <a class="main-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
+            <svg class="main-navigation__logo-image" width="75" height="23" focusable="false">
+              <use class="main-navigation__logo-mobile" xlink:href="#logo-pink-white-mobile"></use>
+              <use class="main-navigation__logo-tablet" xlink:href="#logo-pink-white-tablet"></use>
+              <use class="main-navigation__logo-desktop" xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
+          <button class="main-navigation__button" type="button" aria-label="Открыть/закрыть меню">
+            <svg class="main-navigation__button-icon" width="50" height="24" focusable="false">
+              <use class="main-navigation__button-burger" xlink:href="#icon-menu-burger"></use>
+              <use class="main-navigation__button-cross" xlink:href="#icon-menu-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="site-list main-navigation__list list-reset">
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--current">Конкурс</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML
+              Academy</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+  </header>
+
+  <main class="main page__main">
+    <p class="main__lead main__lead--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
+      вашу бонусную карту!
+      <span class="main__lead-form">Пожалуйста, заполните форму ниже:</span>
+    </p>
+
+    <form class="letter main__letter" method="post" action="https://echo.htmlacademy.ru" novalidate>
+      <fieldset class="letter__part letter__part--name letter__part--white">
+        <p class="letter__item">
+          <label class="letter__item-name" for="surname">Фамилия:</label>
+          <input class="letter__item-field" type="text" name="surname" id="surname" placeholder="Укажите фамилию *"
+            required>
         </p>
-    </footer>
+        <p class="letter__item">
+          <label class="letter__item-name" for="name">Имя:</label>
+          <input class="letter__item-field" type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
+        </p>
+        <p class="letter__item">
+          <label class="letter__item-name" for="patronymic">Отчество:</label>
+          <input class="letter__item-field" type="text" name="ptronymic" id="patronymic"
+            placeholder="Ну и отчество тоже">
+        </p>
+      </fieldset>
 
-    <section class="letter__popup letter__popup--error">
-      <h2 class="letter__popup-title">Что-то пошло не так!</h2>
-      <p class="letter__popup-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <div class="letter__popup-footer letter__popup-footer--error">
-        <button class="letter__popup-button letter__popup-button--error" type="button">Ок</button>
+      <fieldset class="letter__part letter__part--record letter__part--gray">
+        <legend class="letter__part-name letter__part-name--gray">Ваши безбашенные достижения в путешествии</legend>
+        <ul class="letter__checkbox-list list-reset">
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="shark" id="shark" checked>
+            <label class="letter__checkbox-name" for="shark">Сделал селфи с акулой</label>
+          </li>
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="sunburn" id="sunburn" checked>
+            <label class="letter__checkbox-name" for="sunburn">Обгорел на пляже</label>
+          </li>
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="norris" id="norris">
+            <label class="letter__checkbox-name" for="norris">Видел Чака Норриса</label>
+          </li>
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="souveniers" id="souveniers">
+            <label class="letter__checkbox-name" for="souveniers">Накупил сувениров</label>
+          </li>
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="tower" id="tower" checked>
+            <label class="letter__checkbox-name" for="tower">Удержал башню</label>
+          </li>
+          <li class="letter__checkbox">
+            <input class="letter__checkbox-item visually-hidden" type="checkbox" name="hotel" id="hotel">
+            <label class="letter__checkbox-name" for="hotel">Разгромил отель</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="letter__part letter__part--contacts letter__part--white">
+        <legend class="letter__part-name">Контактная информация</legend>
+        <div class="letter__part-wrap">
+          <p class="letter__item letter__item--phone">
+            <label class="letter__item-name" for="phone">Номер телефона</label>
+            <input class="letter__item-field" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+          </p>
+          <p class="letter__item letter__item--email">
+            <label class="letter__item-name" for="email">Адрес почты</label>
+            <input class="letter__item-field" type="email" name="email" id="email" placeholder="Введите почту *"
+              required>
+          </p>
+        </div>
+      </fieldset>
+
+      <fieldset class="letter__part letter__part--os letter__part--gray">
+        <legend class="letter__part-name letter__part-name--gray">С каким приложением путешествовали?</legend>
+        <ul class="letter__radio-list list-reset">
+          <li class="letter__radio">
+            <input class="letter__radio-item visually-hidden" type="radio" name="os" value="ios" id="ios" checked>
+            <label class="letter__radio-name" for="ios">Pink для iOS</label>
+          </li>
+          <li class="letter__radio">
+            <input class="letter__radio-item visually-hidden" type="radio" name="os" value="android" id="android">
+            <label class="letter__radio-name" for="android">Pink на Android</label>
+          </li>
+          <li class="letter__radio">
+            <input class="letter__radio-item visually-hidden" type="radio" name="os" value="windows" id="windows">
+            <label class="letter__radio-name" for="windows">Windows Phone</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="letter__part letter__part--message letter__part--white">
+        <legend class="letter__part-name">Опишите свои эмоции</legend>
+        <textarea class="letter__message" name="message" id="message" rows="6"
+          placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </fieldset>
+
+      <div class="letter__footer">
+        <button class="letter__button">Отправить форму</button>
+        <p class="letter__note"><span class="letter__note--star">*</span> — обязательные <span
+            class="letter__note--more">для заполнения</span> поля</p>
       </div>
-    </section>
+    </form>
+  </main>
 
-    <section class="letter__popup letter__popup--sent">
-      <h2 class="letter__popup-title">Ваша заявка отправлена</h2>
-      <p class="letter__popup-text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и <span>оповестим вас.</span></p>
-      <div class="letter__popup-footer">
-        <button class="letter__popup-button letter__popup-button--sent" type="button">Закрыть окно</button>
-      </div>
-    </section>
+  <footer class="main-footer page__footer">
+    <a class="main-footer__logo" href="index.html" aria-label="Перейти на главную страницу">
+      <svg class="main-footer__logo-image" width="147" height="40" focusable="false">
+        <use class="main-footer__logo-mobile" xlink:href="#logo-pink-blue-mobile"></use>
+        <use class="main-footer__logo-desktop" xlink:href="#logo-pink-blue-desktop"></use>
+      </svg>
+    </a>
 
-    <script src="js/navigation.min.js"></script>
-    <script src="js/letter.min.js"></script>
-  </body>
+    <ul class="social main-footer__social list-reset">
+      <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com/pinkapp"
+          aria-label="Наша страница в Твиттере"></a></li>
+      <li class="social__item"><a class="social__link social__link--facebook" href="https://www.facebook.com/pinkapp"
+          aria-label="Наша страница на Фейсбук"></a></li>
+      <li class="social__item"><a class="social__link social__link--youtube"
+          href="https://www.youtube.com/channel/pinkapp" aria-label="Наша страница на Ютьюб"></a></li>
+    </ul>
+
+    <p class="copyright main-footer__copyright">Разработано
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <svg class="copyright__logo" width="27" height="34" focusable="false">
+          <use xlink:href="#logo-htmlacademy"></use>
+        </svg>
+      </a>
+    </p>
+  </footer>
+
+  <section class="letter__popup letter__popup--error">
+    <h2 class="letter__popup-title">Что-то пошло не так!</h2>
+    <p class="letter__popup-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <div class="letter__popup-footer letter__popup-footer--error">
+      <button class="letter__popup-button letter__popup-button--error" type="button">Ок</button>
+    </div>
+  </section>
+
+  <section class="letter__popup letter__popup--sent">
+    <h2 class="letter__popup-title">Ваша заявка отправлена</h2>
+    <p class="letter__popup-text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы
+      рассмотрим ее и <span>оповестим вас.</span></p>
+    <div class="letter__popup-footer">
+      <button class="letter__popup-button letter__popup-button--sent" type="button">Закрыть окно</button>
+    </div>
+  </section>
+
+  <script src="js/navigation.min.js"></script>
+  <script src="js/letter.min.js"></script>
+</body>
+
 </html>

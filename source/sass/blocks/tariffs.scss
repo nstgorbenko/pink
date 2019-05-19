@@ -10,6 +10,7 @@
 
 .tariffs__title {
   min-width: 246px;
+  max-width: 246px;
   padding: 15px;
   padding-bottom: 19px;
   text-align: center;
@@ -62,6 +63,7 @@
 }
 
 .tariffs__info {
+  max-width: 232px;
   padding: 14px 22px;
   font-size: 14px;
   line-height: 30px;
@@ -81,6 +83,7 @@
 }
 
 .tariffs__text {
+  width: 190px;
   margin: 0;
 }
 
@@ -88,7 +91,7 @@
   display: none;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width - 1px) {
   .tariffs__table {
     transform: translateX(-532px);
     transition: all 0.5s ease-in-out;
@@ -152,6 +155,7 @@
 @media (min-width: $tablet-width) {
   .tariffs__title {
     min-width: 130px;
+    max-width: 130px;
     padding: 12px;
 
     &--hit {
@@ -177,6 +181,7 @@
   }
 
   .tariffs__info {
+    max-width: 137px;
     padding: 5px 0 10px 15px;
     text-transform: none;
 

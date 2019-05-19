@@ -1,6 +1,7 @@
 .copyright {
   font-size: 14px;
   line-height: 18px;
+  text-align: right;
   color: #283645;
 }
 
@@ -8,6 +9,7 @@
   position: absolute;
   top: 24px;
   right: 0;
+  display: block;
   outline: none;
 }
 
@@ -36,9 +38,5 @@
 @media (min-width: $desktop-width) {
   .copyright {
     font-size: 18px;
-  }
-
-  .copyright__link {
-    top: -3px;
   }
 }

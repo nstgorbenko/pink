@@ -3,8 +3,17 @@
   background-color: #ffffff;
 }
 
+.reviews__wrapper {
+  min-height: 260px;
+  padding-bottom: 50px;
+}
+
 .reviews__toggle {
   display: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .reviews__quote {
@@ -33,10 +42,9 @@
   color: #283645;
 }
 
-@media (max-width: $desktop-width) {
+@media (max-width: $desktop-width - 1px) {
   .reviews__wrapper {
     position: relative;
-    min-height: 310px;
   }
 
   .reviews__controls {
@@ -98,8 +106,7 @@
 
 @media (min-width: $tablet-width) {
   .reviews__wrapper {
-    min-height: 279px;
-    // box-sizing: border-box;
+    min-height: 229px;
   }
 
   .reviews__text {
@@ -159,7 +166,7 @@
   .reviews__wrapper {
     position: relative;
     width: 700px;
-    min-height: 285px;
+    min-height: 235px;
     margin: 0 auto;
     padding-top: 85px;
 
@@ -191,9 +198,11 @@
     display: block;
     width: 22px;
     height: 41px;
+    outline: none;
     opacity: 0.3;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.6;
     }
 

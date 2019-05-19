@@ -1,10 +1,12 @@
 .download-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .download-list__item {
+  flex-shrink: 0;
   width: 47px;
 }
 

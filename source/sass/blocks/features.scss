@@ -123,6 +123,7 @@
   .features__screen {
     z-index: 1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
     width: 960px;
@@ -160,6 +161,7 @@
 
   .features__list {
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: 960px;
     margin: 0 auto;
@@ -198,6 +200,6 @@
   }
 
   .features__text span {
-    display: initial;
+    display: inline;
   }
 }

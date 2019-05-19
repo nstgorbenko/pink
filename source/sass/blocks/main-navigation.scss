@@ -63,7 +63,7 @@
   z-index: 1;
 }
 
-@media (max-width: $desktop-width) {
+@media (max-width: $desktop-width - 1px) {
   .main-navigation--closed .main-navigation__list {
     display: none;
   }

@@ -40,6 +40,12 @@
   opacity: 0.3;
 
   fill: #283645;
+
+  &--crop {
+    opacity: 1;
+
+    fill: #d22856;
+  }
 }
 
 .editor__filters-button:hover .editor__filters-icon,
@@ -55,36 +61,26 @@
 
 .editor__filters-item {
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -75px;
+    left: -54px;
+    width: 160px;
+    height: 1px;
+    background-color: #dee0df;
+  }
 }
 
 .editor__scale {
   display: none;
   width: 240px;
-  height: 2px;
-  background-color: #283645;
-  outline: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 
   appearance: none;
-
-  &:active::-moz-range-thumb {
-    background-color: #d22856;
-  }
-
-  &::-webkit-slider-thumb,
-  &::-moz-range-thumb {
-    width: 14px;
-    height: 14px;
-    background-color: #ffffff;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    cursor: pointer;
-
-    appearance: none;
-
-    &:active {
-      background-color: #d22856;
-    }
-  }
 
   &--crop {
     position: absolute;
@@ -93,19 +89,97 @@
     display: block;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -35px;
-    left: -40px;
-    width: 320px;
-    height: 1px;
-    background-color: #dee0df;
-  }
-}
+  &:focus {
+    outline: none;
 
-.editor__scale:focus::-webkit-slider-thumb {
-  background-color: #d22856;
+    &::-webkit-slider-thumb {
+      background-color: #d22856;
+    }
+
+    &::-moz-range-thumb {
+      background-color: #d22856;
+    }
+
+    &::-ms-thumb {
+      background-color: #d22856;
+    }
+  }
+
+  &:hover::-ms-thumb {
+    background-color: #d22856;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 240px;
+    height: 2px;
+    background: #283645;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: -6px;
+    background-color: #ffffff;
+    border: 2px solid #d22856;
+    border-radius: 50%;
+    cursor: pointer;
+
+    appearance: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #d22856;
+    }
+  }
+
+  &::-moz-range-track {
+    width: 240px;
+    height: 2px;
+    background: #283645;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: -6px;
+    background-color: #ffffff;
+    border: 2px solid #d22856;
+    border-radius: 50%;
+    cursor: pointer;
+
+    appearance: none;
+
+    &:hover,
+    &:active {
+      background-color: #d22856;
+    }
+  }
+
+  &::-ms-track {
+    width: 240px;
+    height: 2px;
+    color: transparent;
+    background: transparent;
+    border-width: 8px 0;
+    border-color: transparent;
+    cursor: pointer;
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background: #283645;
+  }
+
+  &::-ms-thumb {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: 2px solid #d22856;
+    border-radius: 50%;
+  }
 }
 
 .editor__button {
@@ -176,7 +250,6 @@
     width: 270px;
     margin: 0;
     margin-top: 7px;
-    margin-bottom: 59px;
     padding: 0;
     padding-bottom: 30px;
   }
@@ -188,29 +261,25 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &::after {
+      bottom: -25px;
+      left: -4px;
+      width: 275px;
+    }
   }
 
   .editor__scale {
-    display: initial;
+    display: block;
     width: 202px;
-    margin-top: 12px;
+    margin-top: 5px;
 
     &--crop {
       position: static;
     }
 
     &--contrast {
-      margin-top: 9px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -25px;
-      left: 0;
-      width: 275px;
-      height: 1px;
-      background-color: #dee0df;
+      margin-top: 0;
     }
   }
 
@@ -228,11 +297,18 @@
       width: 16px;
       height: 16px;
     }
+
+    &--crop {
+      opacity: 0.3;
+
+      fill: #283645;
+    }
   }
 
   .editor__buttons {
     display: flex;
     flex-direction: column;
+    margin-top: auto;
   }
 
   .editor__button {
@@ -249,7 +325,6 @@
   .editor__filters {
     width: 410px;
     margin-top: -4px;
-    margin-bottom: 129px;
   }
 
   .editor__filters-item {
@@ -257,6 +332,12 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &::after {
+      bottom: -15px;
+      left: 2px;
+      width: 410px;
     }
   }
 
@@ -278,12 +359,7 @@
 
   .editor__scale {
     width: 288px;
-    margin-top: 23px;
-
-    &::after {
-      bottom: -14px;
-      width: 410px;
-    }
+    margin-top: 4px;
   }
 
   .editor__buttons {

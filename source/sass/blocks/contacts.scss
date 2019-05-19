@@ -57,7 +57,7 @@ a.contacts__item-link {
   position: relative;
   width: 320px;
   height: 200px;
-  background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-mobile@1x.png");
+  background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 57%, 50% 100%;
 
@@ -74,7 +74,7 @@ a.contacts__item-link {
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-mobile@2x.png");
+    background-image: url("../../img/icon-map-marker.svg"), url("../../img/bg-map-mobile@2x.jpg");
     background-size: 36px 36px, 320px 645px;
   }
 }
