@@ -230,18 +230,21 @@
 
 @media (min-width: $tablet-width) {
   .editor__form {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
-    height: 427px;
     padding-top: 40px;
+    padding-left: 348px;
   }
 
   .editor__photo {
+    position: absolute;
+    top: 40px;
+    left: 0;
     width: 300px;
     height: 400px;
-    margin-right: 49px;
   }
 
   .editor__filters {
@@ -308,7 +311,7 @@
   .editor__buttons {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
+    margin-top: 62px;
   }
 
   .editor__button {
@@ -318,8 +321,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .editor__photo {
-    margin-right: 88px;
+  .editor__form {
+    padding-left: 390px;
   }
 
   .editor__filters {
@@ -364,6 +367,7 @@
 
   .editor__buttons {
     flex-direction: row;
+    margin-top: 132px;
     margin-left: 2px;
   }
 

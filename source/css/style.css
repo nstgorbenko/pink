@@ -539,6 +539,7 @@ a.contacts__item-link:active {
 
 @media (min-width: 660px) {
   .editor__form {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -550,12 +551,14 @@ a.contacts__item-link:active {
         flex-wrap: wrap;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    height: 427px;
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-left: 348px; }
   .editor__photo {
+    position: absolute;
+    top: 40px;
+    left: 0;
     width: 300px;
-    height: 400px;
-    margin-right: 49px; }
+    height: 400px; }
   .editor__filters {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -609,14 +612,14 @@ a.contacts__item-link:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: auto; }
+    margin-top: 62px; }
   .editor__button {
     width: 260px;
     margin-bottom: 25px; } }
 
 @media (min-width: 960px) {
-  .editor__photo {
-    margin-right: 88px; }
+  .editor__form {
+    padding-left: 390px; }
   .editor__filters {
     width: 410px;
     margin-top: -4px; }
@@ -646,6 +649,7 @@ a.contacts__item-link:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 132px;
     margin-left: 2px; }
   .editor__button {
     width: 183px;
@@ -707,6 +711,10 @@ a.contacts__item-link:active {
     width: 157px;
     height: 278px;
     background: url("../img/iphone-screen-mobile@1x.png") no-repeat 0 0; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .features__list::after {
+        background-image: url("../img/iphone-screen-mobile@2x.png");
+        background-size: 157px 320px; } }
 
 .features__item {
   margin-bottom: 31px; }
@@ -748,7 +756,13 @@ a.contacts__item-link:active {
       left: 20px;
       width: 268px;
       height: 482px;
-      background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 1px 2px; }
+      background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 1px 2px; } }
+    @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
+      .features__list::after {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+        background-size: 268px 481px; } }
+
+@media (min-width: 660px) {
   .features__item {
     margin-bottom: 35px; }
   .features__text span {
